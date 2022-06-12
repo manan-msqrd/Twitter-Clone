@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_twitter_clone/constants/routes.dart';
-import 'package:flutter_twitter_clone/homepage.dart';
 import 'package:flutter_twitter_clone/services/auth/auth_exceptions.dart';
 import 'package:flutter_twitter_clone/services/auth/auth_service.dart';
 import 'package:flutter_twitter_clone/utilities/show_error_dialogbox';
@@ -100,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (user?.isEmailVerified ?? false) {
                     //user is verified
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      notesRoute,
+                      homePageRoute,
                       (route) => false,
                     );
                   } else {
